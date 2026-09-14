@@ -6,20 +6,35 @@
     <title>Convite - Sónia Tavares</title>
     <style>
         body {
+            box-sizing: border-box;
             margin: 0;
             min-height: 100vh;
+            padding: 24px;
             background: url("img/sonia fundo.png") center / cover no-repeat;
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        img {
+            display: block;
+            width: min(100%, 560px);
+            height: auto;
         }
 
         a {
+            display: inline-block;
+            max-width: 100%;
+            box-sizing: border-box;
             padding: 12px 28px;
             color: #fff;
             background: #9b3d63;
             border-radius: 6px;
             font: 600 18px Georgia, serif;
             text-decoration: none;
+            text-align: center;
         }
     </style>
 </head>

@@ -2,19 +2,25 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite - Sónia Tavares</title>
   <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       background: #fdfdfd;
       color: #333;
       margin: 0;
-      padding: 0;
+      padding: 16px;
     }
     .container {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px;
+      width: min(100%, 600px);
+      margin: 0 auto;
+      padding: clamp(16px, 4vw, 28px);
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -26,18 +32,25 @@
     .section {
       margin: 20px 0;
     }
+    p {
+      line-height: 1.6;
+    }
     .date-time {
       text-align: center;
-      font-size: 1.2em;
+      font-size: clamp(1rem, 3vw, 1.2em);
       font-weight: bold;
       color: #444;
     }
     .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       text-align: center;
       margin-top: 20px;
     }
     .links a {
       display: inline-block;
+      flex: 1 1 180px;
       margin: 10px;
       padding: 10px 15px;
       background: #b22222;
@@ -52,6 +65,16 @@
       background: #f9f9f9;
       padding: 15px;
       border-left: 4px solid #b22222;
+    }
+    @media (max-width: 420px) {
+      .links a {
+        flex-basis: 100%;
+        margin: 6px 0;
+      }
+
+      .rules ul {
+        padding-left: 20px;
+      }
     }
   </style>
 </head>
